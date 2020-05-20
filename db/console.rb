@@ -16,7 +16,20 @@ album1 = Album.new({
 'artist_id' => artist1.id
   })
 album1.save()
+album2 = Album.new({
+'title' => 'Rain Dogs',
+'genre' => 'Rock',
+'year' => 1985,
+'artist_id' => artist1.id
+  })
+album2.save()
 
-p Album.all()
+
+p "The artist of #{album1.title} is #{album1.artist().name}."
+p album2
+album2.title = 'Swordfishtrombones'
+album2.year = 1983
+album2.update()
+p album2
 binding.pry
 nil

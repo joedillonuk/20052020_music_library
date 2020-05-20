@@ -33,9 +33,20 @@ class Artist
         SqlRunner.run(sql)
       end
 
+      def self.all()
+            sql = "SELECT * FROM artists"
+            artist = SqlRunner.run(sql)
+            return artists.map { |artist| Artist.new(artist)}
+          end
+
+          # List all albums by an artist
 
 
 
+          # Get the artist for a particular albums
+          # Update Artist/album
+          # Delete specific artist/albums
+          # Find Artist/Album by ID
 
 
 
